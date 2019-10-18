@@ -36,12 +36,19 @@ namespace EngineWindowsApp
             this.数据添加ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.退出软件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
+            this.btn_addData = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
+            this.btn_addField = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.btn_calField = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
+            this.toolStrip1.SuspendLayout();
+            this.toolStrip2.SuspendLayout();
+            this.statusStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -74,50 +81,82 @@ namespace EngineWindowsApp
             // 打开文档ToolStripMenuItem
             // 
             this.打开文档ToolStripMenuItem.Name = "打开文档ToolStripMenuItem";
-            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.打开文档ToolStripMenuItem.Text = "打开文档";
             // 
             // 保存文档ToolStripMenuItem
             // 
             this.保存文档ToolStripMenuItem.Name = "保存文档ToolStripMenuItem";
-            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.保存文档ToolStripMenuItem.Text = "保存文档";
             // 
             // 数据添加ToolStripMenuItem
             // 
             this.数据添加ToolStripMenuItem.Name = "数据添加ToolStripMenuItem";
-            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.数据添加ToolStripMenuItem.Text = "数据添加";
             // 
             // 退出软件ToolStripMenuItem
             // 
             this.退出软件ToolStripMenuItem.Name = "退出软件ToolStripMenuItem";
-            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.退出软件ToolStripMenuItem.Text = "退出软件";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_addData});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1028, 25);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
+            // btn_addData
+            // 
+            this.btn_addData.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_addData.Image = ((System.Drawing.Image)(resources.GetObject("btn_addData.Image")));
+            this.btn_addData.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_addData.Name = "btn_addData";
+            this.btn_addData.Size = new System.Drawing.Size(60, 22);
+            this.btn_addData.Text = "添加数据";
+            this.btn_addData.Click += new System.EventHandler(this.btn_addData_Click);
+            // 
             // toolStrip2
             // 
+            this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.btn_addField,
+            this.btn_calField});
             this.toolStrip2.Location = new System.Drawing.Point(0, 50);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1028, 25);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
+            // btn_addField
+            // 
+            this.btn_addField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_addField.Image = ((System.Drawing.Image)(resources.GetObject("btn_addField.Image")));
+            this.btn_addField.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_addField.Name = "btn_addField";
+            this.btn_addField.Size = new System.Drawing.Size(60, 22);
+            this.btn_addField.Text = "添加字段";
+            // 
             // statusStrip1
             // 
+            this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
             this.statusStrip1.Location = new System.Drawing.Point(0, 577);
             this.statusStrip1.Name = "statusStrip1";
             this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(35, 17);
+            this.toolStripStatusLabel1.Text = "read";
             // 
             // splitContainer1
             // 
@@ -154,6 +193,16 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
+            // btn_calField
+            // 
+            this.btn_calField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_calField.Image = ((System.Drawing.Image)(resources.GetObject("btn_calField.Image")));
+            this.btn_calField.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_calField.Name = "btn_calField";
+            this.btn_calField.Size = new System.Drawing.Size(60, 22);
+            this.btn_calField.Text = "字段计算";
+            this.btn_calField.Click += new System.EventHandler(this.btn_calField_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -169,6 +218,12 @@ namespace EngineWindowsApp
             this.Text = "ArcGIS功能汇总";
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
+            this.toolStrip1.ResumeLayout(false);
+            this.toolStrip1.PerformLayout();
+            this.toolStrip2.ResumeLayout(false);
+            this.toolStrip2.PerformLayout();
+            this.statusStrip1.ResumeLayout(false);
+            this.statusStrip1.PerformLayout();
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
@@ -194,6 +249,12 @@ namespace EngineWindowsApp
         private System.Windows.Forms.SplitContainer splitContainer1;
         private ESRI.ArcGIS.Controls.AxTOCControl axTOCControl1;
         private ESRI.ArcGIS.Controls.AxMapControl axMapControl1;
+        private System.Windows.Forms.ToolStripButton btn_addData;
+        private System.Windows.Forms.ToolStripButton btn_addField;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripButton btn_calField;
+        //测试Commit 20191018 23：09
+
     }
 }
 
