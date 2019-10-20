@@ -39,12 +39,12 @@ namespace EngineWindowsApp
             this.btn_addData = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_addField = new System.Windows.Forms.ToolStripButton();
+            this.btn_calField = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_calField = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -142,6 +142,16 @@ namespace EngineWindowsApp
             this.btn_addField.Size = new System.Drawing.Size(60, 22);
             this.btn_addField.Text = "Ìí¼Ó×Ö¶Î";
             // 
+            // btn_calField
+            // 
+            this.btn_calField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_calField.Image = ((System.Drawing.Image)(resources.GetObject("btn_calField.Image")));
+            this.btn_calField.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_calField.Name = "btn_calField";
+            this.btn_calField.Size = new System.Drawing.Size(60, 22);
+            this.btn_calField.Text = "×Ö¶Î¼ÆËã";
+            this.btn_calField.Click += new System.EventHandler(this.btn_calField_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -192,16 +202,6 @@ namespace EngineWindowsApp
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
-            // 
-            // btn_calField
-            // 
-            this.btn_calField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_calField.Image = ((System.Drawing.Image)(resources.GetObject("btn_calField.Image")));
-            this.btn_calField.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_calField.Name = "btn_calField";
-            this.btn_calField.Size = new System.Drawing.Size(60, 22);
-            this.btn_calField.Text = "×Ö¶Î¼ÆËã";
-            this.btn_calField.Click += new System.EventHandler(this.btn_calField_Click);
             // 
             // Form1
             // 
