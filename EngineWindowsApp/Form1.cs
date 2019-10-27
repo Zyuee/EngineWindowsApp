@@ -21,6 +21,7 @@ namespace EngineWindowsApp
 
         private void btn_calField_Click(object sender, EventArgs e)
         {
+            //从toc当中获取
             IFeatureLayer pLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
             IFeatureClass pFclass = pLayer.FeatureClass;
             int indexResult = pFclass.FindField("result");
@@ -47,9 +48,30 @@ namespace EngineWindowsApp
 
         private void btn_addData_Click(object sender, EventArgs e)
         {
+            //添加数据
             ICommand addData = new ControlsAddDataCommand();
             addData.OnCreate(axMapControl1.Object);
             addData.OnClick();
+        }
+
+        private void btn_addField_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_traversal_Click(object sender, EventArgs e)
+        {
+            //遍历图层字段名称
+            IFeatureLayer pLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass pfeaclass = pLayer.FeatureClass;
+            IFields pfields = pfeaclass.Fields;
+
+            for (int i = 0; i < pfields.FieldCount; i++)
+            {
+                IField pfd = pfields.get_Field(i);
+                MessageBox.Show(pfd.Name);
+            }
+
         }
     }
 }

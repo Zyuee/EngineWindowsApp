@@ -45,6 +45,7 @@ namespace EngineWindowsApp
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.btn_traversal = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -126,7 +127,8 @@ namespace EngineWindowsApp
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_addField,
-            this.btn_calField});
+            this.btn_calField,
+            this.btn_traversal});
             this.toolStrip2.Location = new System.Drawing.Point(0, 50);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1028, 25);
@@ -141,6 +143,7 @@ namespace EngineWindowsApp
             this.btn_addField.Name = "btn_addField";
             this.btn_addField.Size = new System.Drawing.Size(60, 22);
             this.btn_addField.Text = "Ìí¼Ó×Ö¶Î";
+            this.btn_addField.Click += new System.EventHandler(this.btn_addField_Click);
             // 
             // btn_calField
             // 
@@ -203,6 +206,16 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
+            // btn_traversal
+            // 
+            this.btn_traversal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_traversal.Image = ((System.Drawing.Image)(resources.GetObject("btn_traversal.Image")));
+            this.btn_traversal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_traversal.Name = "btn_traversal";
+            this.btn_traversal.Size = new System.Drawing.Size(60, 22);
+            this.btn_traversal.Text = "±éÀú×Ö¶Î";
+            this.btn_traversal.Click += new System.EventHandler(this.btn_traversal_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -253,6 +266,7 @@ namespace EngineWindowsApp
         private System.Windows.Forms.ToolStripButton btn_addField;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripButton btn_calField;
+        private System.Windows.Forms.ToolStripButton btn_traversal;
         //²âÊÔCommit 20191018 23£º09
 
     }
