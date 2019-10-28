@@ -9,6 +9,7 @@ using ESRI.ArcGIS.SystemUI;
 using ESRI.ArcGIS.Controls;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Geodatabase;
+using System.Collections;
 
 namespace EngineWindowsApp
 {
@@ -56,6 +57,28 @@ namespace EngineWindowsApp
 
         private void btn_addField_Click(object sender, EventArgs e)
         {
+            //Ò»Î¬Êý×éÌí¼Ó×Ö¶Î
+            ArrayList pList = new ArrayList();
+            pList.Add("×Ö¶Î1");
+            pList.Add("×Ö¶Î2");
+            pList.Add("×Ö¶Î3");
+
+            IFeatureLayer pLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass pfclass = pLayer.FeatureClass;
+            
+            foreach (string name in pList)
+            {
+                //ÐÂ½¨¿Õ×Ö¶Î
+                IFieldEdit pEdit = new FieldClass();
+                pEdit.Type_2 = esriFieldType.esriFieldTypeString;
+                pEdit.Name_2 = name;
+                pEdit.Length_2 = 20;
+                IField fd = pEdit as IField;
+                pfclass.AddField(fd);
+
+            }
+            MessageBox.Show("Íê³É×Ö¶ÎÌí¼Ó");
+            
 
         }
 
