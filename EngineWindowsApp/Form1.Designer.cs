@@ -40,12 +40,13 @@ namespace EngineWindowsApp
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_addField = new System.Windows.Forms.ToolStripButton();
             this.btn_calField = new System.Windows.Forms.ToolStripButton();
+            this.btn_traversal = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_traversal = new System.Windows.Forms.ToolStripButton();
+            this.btn_table = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -106,7 +107,8 @@ namespace EngineWindowsApp
             // toolStrip1
             // 
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.btn_addData});
+            this.btn_addData,
+            this.btn_table});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1028, 25);
@@ -154,6 +156,16 @@ namespace EngineWindowsApp
             this.btn_calField.Size = new System.Drawing.Size(60, 22);
             this.btn_calField.Text = "◊÷∂Œº∆À„";
             this.btn_calField.Click += new System.EventHandler(this.btn_calField_Click);
+            // 
+            // btn_traversal
+            // 
+            this.btn_traversal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_traversal.Image = ((System.Drawing.Image)(resources.GetObject("btn_traversal.Image")));
+            this.btn_traversal.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_traversal.Name = "btn_traversal";
+            this.btn_traversal.Size = new System.Drawing.Size(60, 22);
+            this.btn_traversal.Text = "±È¿˙◊÷∂Œ";
+            this.btn_traversal.Click += new System.EventHandler(this.btn_traversal_Click);
             // 
             // statusStrip1
             // 
@@ -206,15 +218,15 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
-            // btn_traversal
+            // btn_table
             // 
-            this.btn_traversal.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_traversal.Image = ((System.Drawing.Image)(resources.GetObject("btn_traversal.Image")));
-            this.btn_traversal.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_traversal.Name = "btn_traversal";
-            this.btn_traversal.Size = new System.Drawing.Size(60, 22);
-            this.btn_traversal.Text = "±È¿˙◊÷∂Œ";
-            this.btn_traversal.Click += new System.EventHandler(this.btn_traversal_Click);
+            this.btn_table.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_table.Image = ((System.Drawing.Image)(resources.GetObject("btn_table.Image")));
+            this.btn_table.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_table.Name = "btn_table";
+            this.btn_table.Size = new System.Drawing.Size(48, 22);
+            this.btn_table.Text = " Ù–‘±Ì";
+            this.btn_table.Click += new System.EventHandler(this.btn_table_Click);
             // 
             // Form1
             // 
@@ -267,6 +279,7 @@ namespace EngineWindowsApp
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripButton btn_calField;
         private System.Windows.Forms.ToolStripButton btn_traversal;
+        private System.Windows.Forms.ToolStripButton btn_table;
         //≤‚ ‘Commit 20191018 23£∫09
 
     }

@@ -96,5 +96,16 @@ namespace EngineWindowsApp
             }
 
         }
+
+        private void btn_table_Click(object sender, EventArgs e)
+        {
+            //把属性显示到新的窗口
+            string path = @"C:\Users\czy\Desktop\XYTest\GeophySvyFaultPoint-地球物理探测断点-点.xls";
+            DataTable dt1 = ExcelTool.ReadExcelTool(path, "GeophySvyFaultPoint");
+            DataTable dt = dt1.removeEmpty();
+            var frm = new table();
+            frm.setValue(dt);
+            frm.ShowDialog();
+        }
     }
 }
