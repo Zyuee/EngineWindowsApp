@@ -107,5 +107,23 @@ namespace EngineWindowsApp
             frm.setValue(dt);
             frm.ShowDialog();
         }
+
+        private void btn_addXYdata_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btn_addAttribute_Click(object sender, EventArgs e)
+        {
+            string path = @"C:\Users\czy\Desktop\XYTest\GeophySvyFaultPoint-地球物理探测断点-点.xls";
+            DataTable dt1 = ExcelTool.ReadExcelTool(path, "GeophySvyFaultPoint");
+            DataTable dt = dt1.removeEmpty();
+
+            for (int i = 0; i < dt.Rows.Count; i++)
+            {
+                DataRow dw = dt.Rows[i];
+                string fdName = Convert.ToString(dw["字段类型"]);
+            }
+        }
     }
 }
