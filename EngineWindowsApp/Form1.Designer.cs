@@ -38,17 +38,18 @@ namespace EngineWindowsApp
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.btn_addData = new System.Windows.Forms.ToolStripButton();
             this.btn_table = new System.Windows.Forms.ToolStripButton();
+            this.btn_addAttribute = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_addField = new System.Windows.Forms.ToolStripButton();
             this.btn_calField = new System.Windows.Forms.ToolStripButton();
             this.btn_traversal = new System.Windows.Forms.ToolStripButton();
+            this.btn_addXYdata = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_addXYdata = new System.Windows.Forms.ToolStripButton();
-            this.btn_addAttribute = new System.Windows.Forms.ToolStripButton();
+            this.btn_deleteField = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -138,13 +139,24 @@ namespace EngineWindowsApp
             this.btn_table.Text = "预览属性表";
             this.btn_table.Click += new System.EventHandler(this.btn_table_Click);
             // 
+            // btn_addAttribute
+            // 
+            this.btn_addAttribute.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_addAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_addAttribute.Image")));
+            this.btn_addAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_addAttribute.Name = "btn_addAttribute";
+            this.btn_addAttribute.Size = new System.Drawing.Size(101, 22);
+            this.btn_addAttribute.Text = "Excel连接属性表";
+            this.btn_addAttribute.Click += new System.EventHandler(this.btn_addAttribute_Click);
+            // 
             // toolStrip2
             // 
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_addField,
             this.btn_calField,
             this.btn_traversal,
-            this.btn_addXYdata});
+            this.btn_addXYdata,
+            this.btn_deleteField});
             this.toolStrip2.Location = new System.Drawing.Point(0, 50);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1028, 25);
@@ -180,6 +192,16 @@ namespace EngineWindowsApp
             this.btn_traversal.Size = new System.Drawing.Size(60, 22);
             this.btn_traversal.Text = "遍历字段";
             this.btn_traversal.Click += new System.EventHandler(this.btn_traversal_Click);
+            // 
+            // btn_addXYdata
+            // 
+            this.btn_addXYdata.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_addXYdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_addXYdata.Image")));
+            this.btn_addXYdata.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_addXYdata.Name = "btn_addXYdata";
+            this.btn_addXYdata.Size = new System.Drawing.Size(101, 22);
+            this.btn_addXYdata.Text = "Excel生产点要素";
+            this.btn_addXYdata.Click += new System.EventHandler(this.btn_addXYdata_Click);
             // 
             // statusStrip1
             // 
@@ -232,25 +254,15 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
-            // btn_addXYdata
+            // btn_deleteField
             // 
-            this.btn_addXYdata.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_addXYdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_addXYdata.Image")));
-            this.btn_addXYdata.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_addXYdata.Name = "btn_addXYdata";
-            this.btn_addXYdata.Size = new System.Drawing.Size(101, 22);
-            this.btn_addXYdata.Text = "Excel生产点要素";
-            this.btn_addXYdata.Click += new System.EventHandler(this.btn_addXYdata_Click);
-            // 
-            // btn_addAttribute
-            // 
-            this.btn_addAttribute.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_addAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_addAttribute.Image")));
-            this.btn_addAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_addAttribute.Name = "btn_addAttribute";
-            this.btn_addAttribute.Size = new System.Drawing.Size(101, 22);
-            this.btn_addAttribute.Text = "Excel连接属性表";
-            this.btn_addAttribute.Click += new System.EventHandler(this.btn_addAttribute_Click);
+            this.btn_deleteField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_deleteField.Image = ((System.Drawing.Image)(resources.GetObject("btn_deleteField.Image")));
+            this.btn_deleteField.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_deleteField.Name = "btn_deleteField";
+            this.btn_deleteField.Size = new System.Drawing.Size(84, 22);
+            this.btn_deleteField.Text = "批量删除字段";
+            this.btn_deleteField.Click += new System.EventHandler(this.btn_deleteField_Click);
             // 
             // Form1
             // 
@@ -306,6 +318,7 @@ namespace EngineWindowsApp
         private System.Windows.Forms.ToolStripButton btn_table;
         private System.Windows.Forms.ToolStripButton btn_addXYdata;
         private System.Windows.Forms.ToolStripButton btn_addAttribute;
+        private System.Windows.Forms.ToolStripButton btn_deleteField;
         //测试Commit 20191018 23：09
 
     }

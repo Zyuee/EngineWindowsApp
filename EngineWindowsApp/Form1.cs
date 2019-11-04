@@ -125,5 +125,23 @@ namespace EngineWindowsApp
                 string fdName = Convert.ToString(dw["字段类型"]);
             }
         }
+
+        private void btn_deleteField_Click(object sender, EventArgs e)
+        {
+            //遍历图层字段名称
+            IFeatureLayer pLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass pfeaclass = pLayer.FeatureClass;
+            IFields fds = pfeaclass.Fields;
+            for (int i = 0; i < fds.FieldCount; i++)
+            {
+                IField deletefd = fds.get_Field(i);
+                //索引2以后全部删除
+                if (i > 2)
+                {
+                    pfeaclass.DeleteField(deletefd);
+                }
+                MessageBox.Show("完成字段的删除");
+            }
+        }
     }
 }
