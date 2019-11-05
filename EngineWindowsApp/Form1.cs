@@ -128,20 +128,23 @@ namespace EngineWindowsApp
 
         private void btn_deleteField_Click(object sender, EventArgs e)
         {
-            //遍历图层字段名称
-            IFeatureLayer pLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
-            IFeatureClass pfeaclass = pLayer.FeatureClass;
-            IFields fds = pfeaclass.Fields;
-            for (int i = 0; i < fds.FieldCount; i++)
-            {
-                IField deletefd = fds.get_Field(i);
-                //索引2以后全部删除
-                if (i > 2)
-                {
-                    pfeaclass.DeleteField(deletefd);
-                }
-                MessageBox.Show("完成字段的删除");
-            }
+            //获取数据
+            string path = @"D:\地震局项目\20191029\20191029.gdb\RiskAnalysis";
+            string[] arrayPath = path.Split('\\');
+            string GDBPath = arrayPath.GetGDBPath();
+            string FileName = arrayPath.GetFeatureName();
+            IFeatureClass pFclass = AddFeatureTool.GetFeatureClass(GDBPath, FileName);
+
+            //可以外部输入参数，也可以用文本找index（如果知道要删除的字段话）
+            IFields fds = pFclass.Fields;
+            int startIndex = 0;
+            int endIndex = fds.FieldCount;
+
+            startIndex = 1;
+
+            AttributeEditTool.DeleteField(pFclass, startIndex, endIndex);
+
+            MessageBox.Show("完成字段的删除");
         }
     }
 }

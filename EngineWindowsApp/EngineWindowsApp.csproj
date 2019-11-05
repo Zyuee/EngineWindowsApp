@@ -118,6 +118,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AddFeatureTool.cs" />
+    <Compile Include="AttributeEditTool.cs" />
     <Compile Include="Excel2FeatureTool.cs" />
     <Compile Include="ExcelTool.cs" />
     <Compile Include="Form1.cs">
