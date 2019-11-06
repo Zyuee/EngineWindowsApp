@@ -12,14 +12,15 @@ namespace EngineWindowsApp
     {
         public static void DeleteField(IFeatureClass pfeaclass, int n1, int n2)
         {
-            //遍历图层字段名称
+            //删除索引范围
             
             IFields fds = pfeaclass.Fields;
             List <IField> deletefds = new List<IField>();
             for (int i = 0; i < fds.FieldCount; i++)
             {
                 IField pFd = fds.get_Field(i);
-                if (i > n1 && i < n2) 
+                //包含头尾
+                if (i >= n1 && i <= n2) 
                 {
                     deletefds.Add(pFd);
                 }
@@ -28,7 +29,17 @@ namespace EngineWindowsApp
             {
                 pfeaclass.DeleteField(deletefd);
             }
-        } 
+        }
+
+        public static void DeleteField(IFeatureClass pfeaclass, string fieldName)
+        {
+            //重载删除指定字段
+            int deleteIndex = pfeaclass.FindField(fieldName);
+            IFields fds = pfeaclass.Fields;
+            IField deletefield = fds.get_Field(deleteIndex);
+            pfeaclass.DeleteField(deletefield);
+
+        }
 
     }
 }

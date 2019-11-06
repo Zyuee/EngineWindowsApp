@@ -128,8 +128,8 @@ namespace EngineWindowsApp
 
         private void btn_deleteField_Click(object sender, EventArgs e)
         {
-            //获取数据
-            string path = @"D:\地震局项目\20191029\20191029.gdb\RiskAnalysis";
+            //获取数据，可以外接
+            string path = @"D:\地震局项目\20191029\20191029.gdb\Export_Output";
             string[] arrayPath = path.Split('\\');
             string GDBPath = arrayPath.GetGDBPath();
             string FileName = arrayPath.GetFeatureName();
@@ -140,11 +140,31 @@ namespace EngineWindowsApp
             int startIndex = 0;
             int endIndex = fds.FieldCount;
 
-            startIndex = 1;
-
+            startIndex = 3;
+            //主体功能，重载
             AttributeEditTool.DeleteField(pFclass, startIndex, endIndex);
 
             MessageBox.Show("完成字段的删除");
+        }
+
+        private void btn_modifyAttribute_Click(object sender, EventArgs e)
+        {
+            IFeatureLayer myLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass pFeaclass = myLayer.FeatureClass;
+            IFeatureCursor pCursor = pFeaclass.Search(null, false);
+            IFeature fea = pCursor.NextFeature();
+
+            //外部控制
+            string fieldName = "FieldID";
+            int fieldIndex = pFeaclass.FindField(fieldName);
+
+            while (fea != null)
+            {
+                //获取每一个feature每一行的属性值
+                string fieldValue = Convert.ToString(fea.get_Value(fieldIndex));
+
+                fea = pCursor.NextFeature(); ;
+            }
         }
     }
 }
