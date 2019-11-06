@@ -44,12 +44,13 @@ namespace EngineWindowsApp
             this.btn_calField = new System.Windows.Forms.ToolStripButton();
             this.btn_traversal = new System.Windows.Forms.ToolStripButton();
             this.btn_addXYdata = new System.Windows.Forms.ToolStripButton();
+            this.btn_deleteField = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_deleteField = new System.Windows.Forms.ToolStripButton();
+            this.btn_modifyAttribute = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -156,7 +157,8 @@ namespace EngineWindowsApp
             this.btn_calField,
             this.btn_traversal,
             this.btn_addXYdata,
-            this.btn_deleteField});
+            this.btn_deleteField,
+            this.btn_modifyAttribute});
             this.toolStrip2.Location = new System.Drawing.Point(0, 50);
             this.toolStrip2.Name = "toolStrip2";
             this.toolStrip2.Size = new System.Drawing.Size(1028, 25);
@@ -202,6 +204,16 @@ namespace EngineWindowsApp
             this.btn_addXYdata.Size = new System.Drawing.Size(101, 22);
             this.btn_addXYdata.Text = "Excel生产点要素";
             this.btn_addXYdata.Click += new System.EventHandler(this.btn_addXYdata_Click);
+            // 
+            // btn_deleteField
+            // 
+            this.btn_deleteField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_deleteField.Image = ((System.Drawing.Image)(resources.GetObject("btn_deleteField.Image")));
+            this.btn_deleteField.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_deleteField.Name = "btn_deleteField";
+            this.btn_deleteField.Size = new System.Drawing.Size(84, 22);
+            this.btn_deleteField.Text = "批量删除字段";
+            this.btn_deleteField.Click += new System.EventHandler(this.btn_deleteField_Click);
             // 
             // statusStrip1
             // 
@@ -254,15 +266,15 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
-            // btn_deleteField
+            // btn_modifyAttribute
             // 
-            this.btn_deleteField.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_deleteField.Image = ((System.Drawing.Image)(resources.GetObject("btn_deleteField.Image")));
-            this.btn_deleteField.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_deleteField.Name = "btn_deleteField";
-            this.btn_deleteField.Size = new System.Drawing.Size(84, 22);
-            this.btn_deleteField.Text = "批量删除字段";
-            this.btn_deleteField.Click += new System.EventHandler(this.btn_deleteField_Click);
+            this.btn_modifyAttribute.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_modifyAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_modifyAttribute.Image")));
+            this.btn_modifyAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_modifyAttribute.Name = "btn_modifyAttribute";
+            this.btn_modifyAttribute.Size = new System.Drawing.Size(60, 22);
+            this.btn_modifyAttribute.Text = "修正字段";
+            this.btn_modifyAttribute.Click += new System.EventHandler(this.btn_modifyAttribute_Click);
             // 
             // Form1
             // 
@@ -319,6 +331,7 @@ namespace EngineWindowsApp
         private System.Windows.Forms.ToolStripButton btn_addXYdata;
         private System.Windows.Forms.ToolStripButton btn_addAttribute;
         private System.Windows.Forms.ToolStripButton btn_deleteField;
+        private System.Windows.Forms.ToolStripButton btn_modifyAttribute;
         //测试Commit 20191018 23：09
 
     }
