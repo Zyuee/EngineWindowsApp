@@ -164,7 +164,7 @@ namespace EngineWindowsApp
                 string fieldValue = Convert.ToString(fea.get_Value(fieldIndex));
 
                 string str = "test";
-                //给该对应的字段逐一复制
+                //给该对应的字段逐一复制，或其他操作
                 fea.set_Value(fieldIndex, Convert.ToString(str));                
 
                 fea = pCursor.NextFeature(); ;
