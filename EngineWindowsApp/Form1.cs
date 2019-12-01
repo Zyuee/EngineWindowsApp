@@ -171,7 +171,19 @@ namespace EngineWindowsApp
             }
         }
 
+        private void axTOCControl1_OnMouseDown(object sender, ITOCControlEvents_OnMouseDownEvent e)
+        {
+            esriTOCControlItem pItem = esriTOCControlItem.esriTOCControlItemNone;
+            IBasicMap pMap = null;
+            ILayer lyr = null;
+            object other = null;
+            object index = null;
+            axTOCControl1.HitTest(e.x, e.y, ref pItem, ref pMap, ref lyr, ref other, ref index);
+            //1ÊÇµã×ó¼ü
+            if (e.button == 2)
+            {
 
-
+            }
+        }
     }
 }

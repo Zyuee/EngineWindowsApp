@@ -45,12 +45,12 @@ namespace EngineWindowsApp
             this.btn_traversal = new System.Windows.Forms.ToolStripButton();
             this.btn_addXYdata = new System.Windows.Forms.ToolStripButton();
             this.btn_deleteField = new System.Windows.Forms.ToolStripButton();
+            this.btn_modifyAttribute = new System.Windows.Forms.ToolStripButton();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_modifyAttribute = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -215,6 +215,16 @@ namespace EngineWindowsApp
             this.btn_deleteField.Text = "ÅúÁ¿É¾³ý×Ö¶Î";
             this.btn_deleteField.Click += new System.EventHandler(this.btn_deleteField_Click);
             // 
+            // btn_modifyAttribute
+            // 
+            this.btn_modifyAttribute.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_modifyAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_modifyAttribute.Image")));
+            this.btn_modifyAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_modifyAttribute.Name = "btn_modifyAttribute";
+            this.btn_modifyAttribute.Size = new System.Drawing.Size(60, 22);
+            this.btn_modifyAttribute.Text = "ÐÞÕý×Ö¶Î";
+            this.btn_modifyAttribute.Click += new System.EventHandler(this.btn_modifyAttribute_Click);
+            // 
             // statusStrip1
             // 
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -256,6 +266,7 @@ namespace EngineWindowsApp
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
             this.axTOCControl1.Size = new System.Drawing.Size(254, 502);
             this.axTOCControl1.TabIndex = 0;
+            this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
             // 
             // axMapControl1
             // 
@@ -265,16 +276,6 @@ namespace EngineWindowsApp
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
-            // 
-            // btn_modifyAttribute
-            // 
-            this.btn_modifyAttribute.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_modifyAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_modifyAttribute.Image")));
-            this.btn_modifyAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_modifyAttribute.Name = "btn_modifyAttribute";
-            this.btn_modifyAttribute.Size = new System.Drawing.Size(60, 22);
-            this.btn_modifyAttribute.Text = "ÐÞÕý×Ö¶Î";
-            this.btn_modifyAttribute.Click += new System.EventHandler(this.btn_modifyAttribute_Click);
             // 
             // Form1
             // 
