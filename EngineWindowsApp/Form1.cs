@@ -15,6 +15,7 @@ namespace EngineWindowsApp
 {
     public partial class Form1 : Form
     {
+        private IToolbarMenu2 popmenu;
         public Form1()
         {
             InitializeComponent();
@@ -173,17 +174,26 @@ namespace EngineWindowsApp
 
         private void axTOCControl1_OnMouseDown(object sender, ITOCControlEvents_OnMouseDownEvent e)
         {
-            esriTOCControlItem pItem = esriTOCControlItem.esriTOCControlItemNone;
+            esriTOCControlItem item = esriTOCControlItem.esriTOCControlItemNone;
             IBasicMap pMap = null;
             ILayer lyr = null;
             object other = null;
             object index = null;
-            axTOCControl1.HitTest(e.x, e.y, ref pItem, ref pMap, ref lyr, ref other, ref index);
+            axTOCControl1.HitTest(e.x, e.y, ref item, ref pMap, ref lyr, ref other, ref index);
+            axMapControl1.CustomProperty = lyr;
             //1是点左键
-            if (e.button == 2)
+            if (e.button == 2 && item == esriTOCControlItem.esriTOCControlItemLayer)
             {
-
+                popmenu.PopupMenu(e.x, e.y, axMapControl1.hWnd);
             }
+        }
+
+        //打开程序的初始化
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            popmenu = new ToolbarMenuClass();
+            popmenu.AddItem(new removeLayer(), 0, 0, false, esriCommandStyles.esriCommandStyleTextOnly);
+            popmenu.SetHook(axMapControl1.Object);
         }
     }
 }

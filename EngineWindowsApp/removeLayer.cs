@@ -12,7 +12,7 @@ namespace EngineWindowsApp
     class removeLayer : BaseCommand
     {
         private IMapControl4 pMapControl;
-        public void remove()
+        public  removeLayer()
         {
             //base是使用基类的属性
             base.m_caption = "移除图层";

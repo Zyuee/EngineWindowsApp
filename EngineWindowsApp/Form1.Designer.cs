@@ -290,6 +290,7 @@ namespace EngineWindowsApp
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "Form1";
             this.Text = "ArcGIS¹¦ÄÜ»ã×Ü";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
