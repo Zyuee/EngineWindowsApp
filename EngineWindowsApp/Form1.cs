@@ -10,6 +10,7 @@ using ESRI.ArcGIS.Controls;
 using ESRI.ArcGIS.Carto;
 using ESRI.ArcGIS.Geodatabase;
 using System.Collections;
+using ESRI.ArcGIS.Geometry;
 
 namespace EngineWindowsApp
 {
@@ -184,16 +185,32 @@ namespace EngineWindowsApp
             //1是点左键
             if (e.button == 2 && item == esriTOCControlItem.esriTOCControlItemLayer)
             {
-                popmenu.PopupMenu(e.x, e.y, axMapControl1.hWnd);
+                popmenu.PopupMenu(e.x, e.y, axTOCControl1.hWnd);
             }
         }
 
         //打开程序的初始化
         private void Form1_Load(object sender, EventArgs e)
         {
+           
             popmenu = new ToolbarMenuClass();
             popmenu.AddItem(new removeLayer(), 0, 0, false, esriCommandStyles.esriCommandStyleTextOnly);
             popmenu.SetHook(axMapControl1.Object);
+        }
+
+        private void btn_DeleteFeature_Click(object sender, EventArgs e)
+        {
+            IFeatureLayer myLayer = axMapControl1.Map.get_Layer(0) as IFeatureLayer;
+            IFeatureClass feaClass = myLayer.FeatureClass;
+
+            IFeatureCursor pCursor = feaClass.Search(null, false);
+            IFeature pfeature = pCursor.NextFeature();
+            while (pfeature != null)
+            {
+                IGeometry geo = pfeature.ShapeCopy;
+                IArea area = geo as IArea;
+                pfeature = pCursor.NextFeature();
+            }
         }
     }
 }
