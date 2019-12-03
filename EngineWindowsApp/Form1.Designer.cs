@@ -51,6 +51,7 @@ namespace EngineWindowsApp
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
+            this.btn_DeleteFeature = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -113,7 +114,8 @@ namespace EngineWindowsApp
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_addData,
             this.btn_table,
-            this.btn_addAttribute});
+            this.btn_addAttribute,
+            this.btn_DeleteFeature});
             this.toolStrip1.Location = new System.Drawing.Point(0, 25);
             this.toolStrip1.Name = "toolStrip1";
             this.toolStrip1.Size = new System.Drawing.Size(1028, 25);
@@ -277,6 +279,16 @@ namespace EngineWindowsApp
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
             // 
+            // btn_DeleteFeature
+            // 
+            this.btn_DeleteFeature.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_DeleteFeature.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteFeature.Image")));
+            this.btn_DeleteFeature.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_DeleteFeature.Name = "btn_DeleteFeature";
+            this.btn_DeleteFeature.Size = new System.Drawing.Size(101, 22);
+            this.btn_DeleteFeature.Text = "ÅúÁ¿É¾³ýfeature";
+            this.btn_DeleteFeature.Click += new System.EventHandler(this.btn_DeleteFeature_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -334,6 +346,7 @@ namespace EngineWindowsApp
         private System.Windows.Forms.ToolStripButton btn_addAttribute;
         private System.Windows.Forms.ToolStripButton btn_deleteField;
         private System.Windows.Forms.ToolStripButton btn_modifyAttribute;
+        private System.Windows.Forms.ToolStripButton btn_DeleteFeature;
         //²âÊÔCommit 20191018 23£º09
 
     }
