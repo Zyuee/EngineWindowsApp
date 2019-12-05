@@ -209,8 +209,18 @@ namespace EngineWindowsApp
             {
                 IGeometry geo = pfeature.ShapeCopy;
                 IArea area = geo as IArea;
+                double areaDouble = area.Area;
+                //MessageBox.Show(areaDouble.ToString());
+                //条件外部输入
+                if (areaDouble < 1)
+                {
+                    //删除feature
+                    pfeature.Delete();
+                }
                 pfeature = pCursor.NextFeature();
             }
+            axMapControl1.Refresh();
+            MessageBox.Show("删除完成");
         }
     }
 }
