@@ -143,6 +143,7 @@
       <DependentUpon>LicenseInitializer.cs</DependentUpon>
     </Compile>
     <Compile Include="removeLayer.cs" />
+    <Compile Include="showAttribute.cs" />
     <Compile Include="table.cs">
       <SubType>Form</SubType>
     </Compile>

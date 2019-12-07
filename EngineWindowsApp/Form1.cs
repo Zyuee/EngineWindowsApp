@@ -117,6 +117,7 @@ namespace EngineWindowsApp
 
         private void btn_addAttribute_Click(object sender, EventArgs e)
         {
+            //未完成
             string path = @"C:\Users\czy\Desktop\XYTest\GeophySvyFaultPoint-地球物理探测断点-点.xls";
             DataTable dt1 = ExcelTool.ReadExcelTool(path, "GeophySvyFaultPoint");
             DataTable dt = dt1.removeEmpty();
@@ -190,11 +191,13 @@ namespace EngineWindowsApp
         }
 
         //打开程序的初始化
+        //
         private void Form1_Load(object sender, EventArgs e)
         {
            
             popmenu = new ToolbarMenuClass();
             popmenu.AddItem(new removeLayer(), 0, 0, false, esriCommandStyles.esriCommandStyleTextOnly);
+            popmenu.AddItem(new showAttribute(), 0, 0, false, esriCommandStyles.esriCommandStyleTextOnly);
             popmenu.SetHook(axMapControl1.Object);
         }
 
