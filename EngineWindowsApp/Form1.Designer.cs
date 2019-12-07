@@ -39,6 +39,7 @@ namespace EngineWindowsApp
             this.btn_addData = new System.Windows.Forms.ToolStripButton();
             this.btn_table = new System.Windows.Forms.ToolStripButton();
             this.btn_addAttribute = new System.Windows.Forms.ToolStripButton();
+            this.btn_DeleteFeature = new System.Windows.Forms.ToolStripButton();
             this.toolStrip2 = new System.Windows.Forms.ToolStrip();
             this.btn_addField = new System.Windows.Forms.ToolStripButton();
             this.btn_calField = new System.Windows.Forms.ToolStripButton();
@@ -51,7 +52,6 @@ namespace EngineWindowsApp
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.axTOCControl1 = new ESRI.ArcGIS.Controls.AxTOCControl();
             this.axMapControl1 = new ESRI.ArcGIS.Controls.AxMapControl();
-            this.btn_DeleteFeature = new System.Windows.Forms.ToolStripButton();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
             this.toolStrip2.SuspendLayout();
@@ -138,8 +138,8 @@ namespace EngineWindowsApp
             this.btn_table.Image = ((System.Drawing.Image)(resources.GetObject("btn_table.Image")));
             this.btn_table.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_table.Name = "btn_table";
-            this.btn_table.Size = new System.Drawing.Size(72, 22);
-            this.btn_table.Text = "预览属性表";
+            this.btn_table.Size = new System.Drawing.Size(77, 22);
+            this.btn_table.Text = "预览Excel表";
             this.btn_table.Click += new System.EventHandler(this.btn_table_Click);
             // 
             // btn_addAttribute
@@ -151,6 +151,16 @@ namespace EngineWindowsApp
             this.btn_addAttribute.Size = new System.Drawing.Size(101, 22);
             this.btn_addAttribute.Text = "Excel连接属性表";
             this.btn_addAttribute.Click += new System.EventHandler(this.btn_addAttribute_Click);
+            // 
+            // btn_DeleteFeature
+            // 
+            this.btn_DeleteFeature.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
+            this.btn_DeleteFeature.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteFeature.Image")));
+            this.btn_DeleteFeature.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.btn_DeleteFeature.Name = "btn_DeleteFeature";
+            this.btn_DeleteFeature.Size = new System.Drawing.Size(101, 22);
+            this.btn_DeleteFeature.Text = "批量删除feature";
+            this.btn_DeleteFeature.Click += new System.EventHandler(this.btn_DeleteFeature_Click);
             // 
             // toolStrip2
             // 
@@ -278,16 +288,6 @@ namespace EngineWindowsApp
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
             this.axMapControl1.Size = new System.Drawing.Size(770, 502);
             this.axMapControl1.TabIndex = 0;
-            // 
-            // btn_DeleteFeature
-            // 
-            this.btn_DeleteFeature.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
-            this.btn_DeleteFeature.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteFeature.Image")));
-            this.btn_DeleteFeature.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.btn_DeleteFeature.Name = "btn_DeleteFeature";
-            this.btn_DeleteFeature.Size = new System.Drawing.Size(101, 22);
-            this.btn_DeleteFeature.Text = "批量删除feature";
-            this.btn_DeleteFeature.Click += new System.EventHandler(this.btn_DeleteFeature_Click);
             // 
             // Form1
             // 
