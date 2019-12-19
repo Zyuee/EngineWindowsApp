@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace EngineWindowsApp
 {
-    public partial class table : Form
+    public partial class AttrTable : Form
     {
-        public table()
+        public AttrTable()
         {
             InitializeComponent();
         }

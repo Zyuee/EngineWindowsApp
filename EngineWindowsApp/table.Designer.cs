@@ -1,6 +1,6 @@
 ﻿namespace EngineWindowsApp
 {
-    partial class table
+    partial class AttrTable
     {
         /// <summary>
         /// Required designer variable.

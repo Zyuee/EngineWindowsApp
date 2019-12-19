@@ -105,7 +105,7 @@ namespace EngineWindowsApp
             string path = @"C:\Users\czy\Desktop\XYTest\GeophySvyFaultPoint-地球物理探测断点-点.xls";
             DataTable dt1 = ExcelTool.ReadExcelTool(path, "GeophySvyFaultPoint");
             DataTable dt = dt1.removeEmpty();
-            var frm = new table();
+            var frm = new AttrTable();
             frm.setValue(dt);
             frm.ShowDialog();
         }
