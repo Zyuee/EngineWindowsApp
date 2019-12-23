@@ -42,13 +42,13 @@
             this.dataGridView1.Size = new System.Drawing.Size(284, 261);
             this.dataGridView1.TabIndex = 0;
             // 
-            // table
+            // AttrTable
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.dataGridView1);
-            this.Name = "table";
+            this.Name = "AttrTable";
             this.Text = "table";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
