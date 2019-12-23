@@ -112,7 +112,8 @@ namespace EngineWindowsApp
 
         private void btn_addXYdata_Click(object sender, EventArgs e)
         {
-
+            var frmCreatePt = new FormExcel2Pt();
+            frmCreatePt.Show();
         }
 
         private void btn_addAttribute_Click(object sender, EventArgs e)
@@ -224,6 +225,11 @@ namespace EngineWindowsApp
             }
             axMapControl1.Refresh();
             MessageBox.Show("删除完成");
+        }
+
+        private void 打开文档ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

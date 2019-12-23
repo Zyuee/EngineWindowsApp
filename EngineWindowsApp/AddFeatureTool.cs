@@ -24,21 +24,30 @@ namespace EngineWindowsApp
             IWorkspace pWorkspace = pWorkspacefactory.OpenFromFile(filepath, 0);
             IFeatureWorkspace pFeaWorkspace = pWorkspace as IFeatureWorkspace;
 
+            //IFields和IFieldsEdit同时用Fields实现，可以接口跳转
+            //我们最后要的是IFieldsEdit
+            //IFieldEdit提供了添加字段名称类型的方法
             IFields pFields = new FieldsClass();
             IFieldsEdit pFieldsEdit = pFields as IFieldsEdit;
 
-            //IFieldEdit提供了添加字段名称类型的方法
+            //确定一个shape字段，输入是需要添加shape的几何形状0
             IField pField = new FieldClass();
-            IFieldEdit pFieldEdit = pField as IFieldEdit;
+            IFieldEdit pFieldEdit = pField as IFieldEdit; 
             pFieldEdit.Name_2 = "shape";
             pFieldEdit.Type_2 = esriFieldType.esriFieldTypeGeometry;
 
-            //定义了矢量数据是点矢量
+            //对象几何类型的定义，pGeomtryDefEdit
             IGeometryDef pGeomtryDef = new GeometryDefClass();
             IGeometryDefEdit pGeomtryDefEdit = pGeomtryDef as IGeometryDefEdit;
+
+            //将几何类型定义为点
             pGeomtryDefEdit.GeometryType_2 = esriGeometryType.esriGeometryPoint;
 
-            //坐标系统的创建
+            ////也可以直接自定义输入的类型
+            //esriGeometryType type = esriGeometryType.esriGeometryPoint;
+            //pGeomtryDefEdit.GeometryType_2 = type;
+
+            //坐标系统的创建，也是在IGeometryDef当时定义实现
             ISpatialReferenceFactory pSpatialReferenceFactory = new SpatialReferenceEnvironment();
 
             //esri自身能够支持的强制数据类型装换。
@@ -46,7 +55,7 @@ namespace EngineWindowsApp
             pGeomtryDefEdit.SpatialReference_2 = pGeographicCoordinateSystem as ISpatialReference;
 
 
-            //将坐标系参数传回到属性字段
+            //将pGeomtryDef参数传回到属性字段pFieldEdit
             pFieldEdit.GeometryDef_2 = pGeomtryDef;
 
             pFieldsEdit.AddField(pField);
@@ -70,5 +79,7 @@ namespace EngineWindowsApp
 
             return feaclass;
         }
+
+
     }
 }

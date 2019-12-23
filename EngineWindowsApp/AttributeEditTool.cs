@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using ESRI.ArcGIS.Geodatabase;
 using ESRI.ArcGIS.Carto;
+using System.Data;
 
 namespace EngineWindowsApp
 {
@@ -40,6 +41,35 @@ namespace EngineWindowsApp
             pfeaclass.DeleteField(deletefield);
 
         }
+        public static void CreateAttrTable(DataTable exDt, IFeatureClass ptFeclass)
+        {
+            //首先将datatable里面的字段名称添加到属性表里面
+            for (int i = 0; i < exDt.Columns.Count; i++)
+            {
+                string colName = exDt.Columns[i].ColumnName;
+                IField fd = new FieldClass();
+                IFieldEdit fEdit = fd as IFieldEdit;
+                fEdit.Name_2 = colName;
+                if (colName == "x" || colName == "y")
+                {
+                    fEdit.Type_2 = esriFieldType.esriFieldTypeDouble;
+                }
+                else
+                {
+                    fEdit.Type_2 = esriFieldType.esriFieldTypeString;
+                }
+                ptFeclass.AddField(fd);
+            }
+        }
 
+        public static void WriteAttrTabke(DataTable exDt, IFeatureClass ptFeclass, string Lon, string Lat, int n)
+        {
+            //有多少行
+            for (int j = 0; j < exDt.Rows.Count; j++)
+            {
+                IFeature pfea = ptFeclass.CreateFeature();
+
+            }
+        }
     }
 }

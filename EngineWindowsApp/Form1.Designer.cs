@@ -88,25 +88,26 @@ namespace EngineWindowsApp
             // 打开文档ToolStripMenuItem
             // 
             this.打开文档ToolStripMenuItem.Name = "打开文档ToolStripMenuItem";
-            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.打开文档ToolStripMenuItem.Text = "打开文档";
+            this.打开文档ToolStripMenuItem.Click += new System.EventHandler(this.打开文档ToolStripMenuItem_Click);
             // 
             // 保存文档ToolStripMenuItem
             // 
             this.保存文档ToolStripMenuItem.Name = "保存文档ToolStripMenuItem";
-            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.保存文档ToolStripMenuItem.Text = "保存文档";
             // 
             // 数据添加ToolStripMenuItem
             // 
             this.数据添加ToolStripMenuItem.Name = "数据添加ToolStripMenuItem";
-            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.数据添加ToolStripMenuItem.Text = "数据添加";
             // 
             // 退出软件ToolStripMenuItem
             // 
             this.退出软件ToolStripMenuItem.Name = "退出软件ToolStripMenuItem";
-            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
+            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.退出软件ToolStripMenuItem.Text = "退出软件";
             // 
             // toolStrip1
