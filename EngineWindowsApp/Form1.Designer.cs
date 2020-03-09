@@ -66,11 +66,13 @@ namespace EngineWindowsApp
             // 
             // menuStrip1
             // 
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.文件ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(1028, 25);
+            this.menuStrip1.Padding = new System.Windows.Forms.Padding(8, 2, 0, 2);
+            this.menuStrip1.Size = new System.Drawing.Size(1371, 28);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -82,44 +84,45 @@ namespace EngineWindowsApp
             this.数据添加ToolStripMenuItem,
             this.退出软件ToolStripMenuItem});
             this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
-            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(44, 21);
+            this.文件ToolStripMenuItem.Size = new System.Drawing.Size(51, 24);
             this.文件ToolStripMenuItem.Text = "文件";
             // 
             // 打开文档ToolStripMenuItem
             // 
             this.打开文档ToolStripMenuItem.Name = "打开文档ToolStripMenuItem";
-            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.打开文档ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.打开文档ToolStripMenuItem.Text = "打开文档";
             this.打开文档ToolStripMenuItem.Click += new System.EventHandler(this.打开文档ToolStripMenuItem_Click);
             // 
             // 保存文档ToolStripMenuItem
             // 
             this.保存文档ToolStripMenuItem.Name = "保存文档ToolStripMenuItem";
-            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.保存文档ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.保存文档ToolStripMenuItem.Text = "保存文档";
             // 
             // 数据添加ToolStripMenuItem
             // 
             this.数据添加ToolStripMenuItem.Name = "数据添加ToolStripMenuItem";
-            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.数据添加ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.数据添加ToolStripMenuItem.Text = "数据添加";
             // 
             // 退出软件ToolStripMenuItem
             // 
             this.退出软件ToolStripMenuItem.Name = "退出软件ToolStripMenuItem";
-            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.退出软件ToolStripMenuItem.Size = new System.Drawing.Size(144, 26);
             this.退出软件ToolStripMenuItem.Text = "退出软件";
             // 
             // toolStrip1
             // 
+            this.toolStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_addData,
             this.btn_table,
             this.btn_addAttribute,
             this.btn_DeleteFeature});
-            this.toolStrip1.Location = new System.Drawing.Point(0, 25);
+            this.toolStrip1.Location = new System.Drawing.Point(0, 28);
             this.toolStrip1.Name = "toolStrip1";
-            this.toolStrip1.Size = new System.Drawing.Size(1028, 25);
+            this.toolStrip1.Size = new System.Drawing.Size(1371, 27);
             this.toolStrip1.TabIndex = 1;
             this.toolStrip1.Text = "toolStrip1";
             // 
@@ -129,7 +132,7 @@ namespace EngineWindowsApp
             this.btn_addData.Image = ((System.Drawing.Image)(resources.GetObject("btn_addData.Image")));
             this.btn_addData.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_addData.Name = "btn_addData";
-            this.btn_addData.Size = new System.Drawing.Size(60, 22);
+            this.btn_addData.Size = new System.Drawing.Size(73, 24);
             this.btn_addData.Text = "添加数据";
             this.btn_addData.Click += new System.EventHandler(this.btn_addData_Click);
             // 
@@ -139,7 +142,7 @@ namespace EngineWindowsApp
             this.btn_table.Image = ((System.Drawing.Image)(resources.GetObject("btn_table.Image")));
             this.btn_table.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_table.Name = "btn_table";
-            this.btn_table.Size = new System.Drawing.Size(77, 22);
+            this.btn_table.Size = new System.Drawing.Size(95, 24);
             this.btn_table.Text = "预览Excel表";
             this.btn_table.Click += new System.EventHandler(this.btn_table_Click);
             // 
@@ -149,7 +152,7 @@ namespace EngineWindowsApp
             this.btn_addAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_addAttribute.Image")));
             this.btn_addAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_addAttribute.Name = "btn_addAttribute";
-            this.btn_addAttribute.Size = new System.Drawing.Size(101, 22);
+            this.btn_addAttribute.Size = new System.Drawing.Size(125, 24);
             this.btn_addAttribute.Text = "Excel连接属性表";
             this.btn_addAttribute.Click += new System.EventHandler(this.btn_addAttribute_Click);
             // 
@@ -159,12 +162,13 @@ namespace EngineWindowsApp
             this.btn_DeleteFeature.Image = ((System.Drawing.Image)(resources.GetObject("btn_DeleteFeature.Image")));
             this.btn_DeleteFeature.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_DeleteFeature.Name = "btn_DeleteFeature";
-            this.btn_DeleteFeature.Size = new System.Drawing.Size(101, 22);
+            this.btn_DeleteFeature.Size = new System.Drawing.Size(125, 24);
             this.btn_DeleteFeature.Text = "批量删除feature";
             this.btn_DeleteFeature.Click += new System.EventHandler(this.btn_DeleteFeature_Click);
             // 
             // toolStrip2
             // 
+            this.toolStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.toolStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.btn_addField,
             this.btn_calField,
@@ -172,9 +176,9 @@ namespace EngineWindowsApp
             this.btn_addXYdata,
             this.btn_deleteField,
             this.btn_modifyAttribute});
-            this.toolStrip2.Location = new System.Drawing.Point(0, 50);
+            this.toolStrip2.Location = new System.Drawing.Point(0, 55);
             this.toolStrip2.Name = "toolStrip2";
-            this.toolStrip2.Size = new System.Drawing.Size(1028, 25);
+            this.toolStrip2.Size = new System.Drawing.Size(1371, 27);
             this.toolStrip2.TabIndex = 2;
             this.toolStrip2.Text = "toolStrip2";
             // 
@@ -184,7 +188,7 @@ namespace EngineWindowsApp
             this.btn_addField.Image = ((System.Drawing.Image)(resources.GetObject("btn_addField.Image")));
             this.btn_addField.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_addField.Name = "btn_addField";
-            this.btn_addField.Size = new System.Drawing.Size(60, 22);
+            this.btn_addField.Size = new System.Drawing.Size(73, 24);
             this.btn_addField.Text = "添加字段";
             this.btn_addField.Click += new System.EventHandler(this.btn_addField_Click);
             // 
@@ -194,7 +198,7 @@ namespace EngineWindowsApp
             this.btn_calField.Image = ((System.Drawing.Image)(resources.GetObject("btn_calField.Image")));
             this.btn_calField.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_calField.Name = "btn_calField";
-            this.btn_calField.Size = new System.Drawing.Size(60, 22);
+            this.btn_calField.Size = new System.Drawing.Size(73, 24);
             this.btn_calField.Text = "字段计算";
             this.btn_calField.Click += new System.EventHandler(this.btn_calField_Click);
             // 
@@ -204,7 +208,7 @@ namespace EngineWindowsApp
             this.btn_traversal.Image = ((System.Drawing.Image)(resources.GetObject("btn_traversal.Image")));
             this.btn_traversal.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_traversal.Name = "btn_traversal";
-            this.btn_traversal.Size = new System.Drawing.Size(60, 22);
+            this.btn_traversal.Size = new System.Drawing.Size(73, 24);
             this.btn_traversal.Text = "遍历字段";
             this.btn_traversal.Click += new System.EventHandler(this.btn_traversal_Click);
             // 
@@ -214,7 +218,7 @@ namespace EngineWindowsApp
             this.btn_addXYdata.Image = ((System.Drawing.Image)(resources.GetObject("btn_addXYdata.Image")));
             this.btn_addXYdata.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_addXYdata.Name = "btn_addXYdata";
-            this.btn_addXYdata.Size = new System.Drawing.Size(101, 22);
+            this.btn_addXYdata.Size = new System.Drawing.Size(125, 24);
             this.btn_addXYdata.Text = "Excel生产点要素";
             this.btn_addXYdata.Click += new System.EventHandler(this.btn_addXYdata_Click);
             // 
@@ -224,7 +228,7 @@ namespace EngineWindowsApp
             this.btn_deleteField.Image = ((System.Drawing.Image)(resources.GetObject("btn_deleteField.Image")));
             this.btn_deleteField.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_deleteField.Name = "btn_deleteField";
-            this.btn_deleteField.Size = new System.Drawing.Size(84, 22);
+            this.btn_deleteField.Size = new System.Drawing.Size(103, 24);
             this.btn_deleteField.Text = "批量删除字段";
             this.btn_deleteField.Click += new System.EventHandler(this.btn_deleteField_Click);
             // 
@@ -234,30 +238,33 @@ namespace EngineWindowsApp
             this.btn_modifyAttribute.Image = ((System.Drawing.Image)(resources.GetObject("btn_modifyAttribute.Image")));
             this.btn_modifyAttribute.ImageTransparentColor = System.Drawing.Color.Magenta;
             this.btn_modifyAttribute.Name = "btn_modifyAttribute";
-            this.btn_modifyAttribute.Size = new System.Drawing.Size(60, 22);
+            this.btn_modifyAttribute.Size = new System.Drawing.Size(73, 24);
             this.btn_modifyAttribute.Text = "修正字段";
             this.btn_modifyAttribute.Click += new System.EventHandler(this.btn_modifyAttribute_Click);
             // 
             // statusStrip1
             // 
+            this.statusStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1});
-            this.statusStrip1.Location = new System.Drawing.Point(0, 577);
+            this.statusStrip1.Location = new System.Drawing.Point(0, 724);
             this.statusStrip1.Name = "statusStrip1";
-            this.statusStrip1.Size = new System.Drawing.Size(1028, 22);
+            this.statusStrip1.Padding = new System.Windows.Forms.Padding(1, 0, 19, 0);
+            this.statusStrip1.Size = new System.Drawing.Size(1371, 25);
             this.statusStrip1.TabIndex = 3;
             this.statusStrip1.Text = "statusStrip1";
             // 
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(35, 17);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(42, 20);
             this.toolStripStatusLabel1.Text = "read";
             // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 75);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 82);
+            this.splitContainer1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.splitContainer1.Name = "splitContainer1";
             // 
             // splitContainer1.Panel1
@@ -267,17 +274,19 @@ namespace EngineWindowsApp
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.axMapControl1);
-            this.splitContainer1.Size = new System.Drawing.Size(1028, 502);
-            this.splitContainer1.SplitterDistance = 254;
+            this.splitContainer1.Size = new System.Drawing.Size(1371, 642);
+            this.splitContainer1.SplitterDistance = 338;
+            this.splitContainer1.SplitterWidth = 5;
             this.splitContainer1.TabIndex = 4;
             // 
             // axTOCControl1
             // 
             this.axTOCControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axTOCControl1.Location = new System.Drawing.Point(0, 0);
+            this.axTOCControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axTOCControl1.Name = "axTOCControl1";
             this.axTOCControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axTOCControl1.OcxState")));
-            this.axTOCControl1.Size = new System.Drawing.Size(254, 502);
+            this.axTOCControl1.Size = new System.Drawing.Size(338, 642);
             this.axTOCControl1.TabIndex = 0;
             this.axTOCControl1.OnMouseDown += new ESRI.ArcGIS.Controls.ITOCControlEvents_Ax_OnMouseDownEventHandler(this.axTOCControl1_OnMouseDown);
             // 
@@ -285,22 +294,24 @@ namespace EngineWindowsApp
             // 
             this.axMapControl1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.axMapControl1.Location = new System.Drawing.Point(0, 0);
+            this.axMapControl1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.axMapControl1.Name = "axMapControl1";
             this.axMapControl1.OcxState = ((System.Windows.Forms.AxHost.State)(resources.GetObject("axMapControl1.OcxState")));
-            this.axMapControl1.Size = new System.Drawing.Size(770, 502);
+            this.axMapControl1.Size = new System.Drawing.Size(1028, 642);
             this.axMapControl1.TabIndex = 0;
             // 
             // Form1
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1028, 599);
+            this.ClientSize = new System.Drawing.Size(1371, 749);
             this.Controls.Add(this.splitContainer1);
             this.Controls.Add(this.statusStrip1);
             this.Controls.Add(this.toolStrip2);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Form1";
             this.Text = "ArcGIS功能汇总";
             this.Load += new System.EventHandler(this.Form1_Load);

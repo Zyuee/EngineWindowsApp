@@ -1,26 +1,38 @@
+using System.Windows.Forms;
 using System;
 using ESRI.ArcGIS;
 
 namespace EngineWindowsApp
 {
-    internal partial class LicenseInitializer
+  internal partial class LicenseInitializer
+  {
+    public LicenseInitializer()
     {
-        public LicenseInitializer()
-        {
-            ResolveBindingEvent += new EventHandler(BindingArcGISRuntime);
-        }
-
-        void BindingArcGISRuntime(object sender, EventArgs e)
-        {
-            //
-            // TODO: Modify ArcGIS runtime binding code as needed
-            //
-            if (!RuntimeManager.Bind(ProductCode.Engine))
-            {
-                // Failed to bind, announce and force exit
-                System.Windows.Forms.MessageBox.Show("Invalid ArcGIS runtime binding. Application will shut down.");
-                System.Environment.Exit(0);
-            }
-        }
+      ResolveBindingEvent += new EventHandler(BindingArcGISRuntime);
     }
+
+    void BindingArcGISRuntime(object sender, EventArgs e)
+    {
+      //
+      // TODO: Modify ArcGIS runtime binding code as needed; for example, 
+      // the list of products and their binding preference order.
+      //
+      ProductCode[] supportedRuntimes = new ProductCode[] { 
+        ProductCode.Engine, ProductCode.Desktop };
+      foreach (ProductCode c in supportedRuntimes)
+      {
+        if (RuntimeManager.Bind(c))
+          return;
+      }
+
+      //
+      // TODO: Modify the code below on how to handle bind failure
+      //
+
+      // Failed to bind, announce and force exit
+      MessageBox.Show("ArcGIS runtime binding failed. Application will shut down.");
+      System.Environment.Exit(0);
+
+    }
+  }
 }
